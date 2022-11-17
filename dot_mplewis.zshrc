@@ -2,16 +2,12 @@
 
 export VISUAL=vim
 export EDITOR=vim
-export AWS_DEFAULT_REGION=us-east-1
-export AIRFLOW_HOME=~/airflow
-export DOCKER_BUILDKIT=1
-export COMPOSE_DOCKER_CLI_BUILD=1
-export GOPATH="$HOME/code/go"
-export PGO_OPERATOR_NAMESPACE=my-postgresql
-export PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS=1
+git config --global core.editor "code --wait"
 
+alias gcam="git commit --amend"
 alias gds="git diff --staged"
 alias gfp="git fetch --prune"
+alias gmoma="git fetch && git merge origin/master"
 alias gpforce="git push --force-with-lease"
 alias gp="git push"
 alias gpp="git pull --prune"
@@ -34,12 +30,7 @@ alias lss="l -s size -r"
 alias pir="pip install -r"
 alias pirr="pir requirements.txt"
 alias pira="pirr; pir requirements-dev.txt; pir tests/requirements.txt"
-alias prm="poetry run ./manage.py"
 alias wip="git add .; git commit -m 'wip' -n"
-alias s3cp="as matt.lewis -- aws s3 cp --recursive"
 alias tf="terraform"
-alias tg="terragrunt"
 
-export PATH="$HOME/code/sh:$HOME/code/go/bin:$HOME/.cargo/bin:$PATH"
-
-eval "$(jump shell zsh)"
+export PATH="$HOME/code/sh:$PATH"
